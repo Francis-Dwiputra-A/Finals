@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Attacker_script : MonoBehaviour
+public class Attacker_script : MonoBehaviour 
 {
     public Animator animator;
     public float maxHP = 5;
     public float HP;
+    public Die die;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,15 +16,13 @@ public class Attacker_script : MonoBehaviour
 
     public void btnAtt()
     {
-        TakeHit(1);
+        die.TakeHit(1);
         animator.SetTrigger("Attack");
     }
-    public void TakeHit(float dmg)
+
+    public void btnStrike()
     {
-        HP -= dmg;
-        if (HP < 0)
-        {
-            Destroy(GameObject.Find("Enemy"));
-        }
+        die.TakeHit(2); 
+        animator.SetTrigger("Strike");
     }
 }
