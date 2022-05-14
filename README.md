@@ -2,7 +2,7 @@
 ![GitHub last commit](https://img.shields.io/github/last-commit/Francis-Dwiputra-A/Finals)
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/Francis-Dwiputra-A/Finals)
 
-<p align = "center"> <img src = "static/sad.gif"> </p>
+<p align = "center"> <img src = "static/sad.gif"> <img src = "static/test 1.gif"></p>
 
 # Game Development Project
 

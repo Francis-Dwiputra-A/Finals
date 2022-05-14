@@ -99,6 +99,8 @@
     <Compile Include="Assets\Easy_die_enemy.cs" />
     <Compile Include="Assets\CodeMonkey\CMDebug.cs" />
     <Compile Include="Assets\CodeMonkey\Utils\FunctionPeriodic.cs" />
+    <Compile Include="Assets\Elite_Player_Attack.cs" />
+    <Compile Include="Assets\EliteEnemyBehaviour.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Knight Files\Read Me.txt" />
