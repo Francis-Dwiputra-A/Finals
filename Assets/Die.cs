@@ -9,6 +9,7 @@ public class Die : MonoBehaviour
     public float HP;
     public Healthbar healthbar;
     // Start is called before the first frame update
+    public Game_Load GL;
     void Start()
     {
         HP = maxHP;
@@ -23,6 +24,7 @@ public class Die : MonoBehaviour
         {
             animator.SetTrigger("Die");
             Destroy(gameObject);
+            GL.LoadNextLevel();
         }
     }
 }

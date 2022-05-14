@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/Elite_Stage.unity
+- path: Assets/Scenes/Boss_Stage.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

@@ -9,6 +9,7 @@ public class EliteEnemyBehaviour : MonoBehaviour
     public float HP;
     public Healthbar healthbar;
     public Elite_Player_Attack epa;
+    public Game_Load GL;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +24,7 @@ public class EliteEnemyBehaviour : MonoBehaviour
         if (HP < 1)
         {
             Destroy(gameObject);
+            GL.LoadNextLevel();
         }
         else {
             epa.TakeHit(10);
