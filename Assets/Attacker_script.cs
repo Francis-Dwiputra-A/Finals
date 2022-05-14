@@ -22,7 +22,7 @@ public class Attacker_script : MonoBehaviour
 
     public void btnStrike()
     {
-        die.TakeHit(2); 
+        die.TakeHit(2);
         animator.SetTrigger("Strike");
     }
 }

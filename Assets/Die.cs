@@ -7,21 +7,19 @@ public class Die : MonoBehaviour
     public Animator animator;
     public float maxHP = 5;
     public float HP;
+    public Healthbar healthbar;
     // Start is called before the first frame update
     void Start()
     {
         HP = maxHP;
+        healthbar.setMaxHealth(maxHP);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     public void TakeHit(float dmg)
     {
         HP -= dmg;
-        if (HP < 0)
+        healthbar.setHealth(HP);
+        if (HP < 1)
         {
             animator.SetTrigger("Die");
             Destroy(gameObject);
