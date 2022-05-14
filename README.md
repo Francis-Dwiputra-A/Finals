@@ -1,6 +1,4 @@
-<p align = "center"> ![](C:\Users\Asus\Downloads\test%202.gif)</p>
-
-
+<p align = "center"> <img src = "static/sad.gif"> </p>
 
 # Game Development Project
 
