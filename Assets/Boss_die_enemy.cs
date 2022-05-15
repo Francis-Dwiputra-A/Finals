@@ -5,15 +5,17 @@ using UnityEngine;
 public class Boss_die_enemy : MonoBehaviour
 {
     public Animator animator;
-    public float maxHP = 50;
+    public float maxHP = 30;
     public float HP;
     public Healthbar healthbar;
     public Boss_die_knight knight;
+    Vector3 myVector;
     // Start is called before the first frame update
     void Start()
     {
         HP = maxHP;
         healthbar.setMaxHealth(HP);
+        myVector = new Vector3(2.0f, 4.8f, 0.0f);
     }
 
     public void TakeHit(float dmg)
@@ -25,15 +27,17 @@ public class Boss_die_enemy : MonoBehaviour
             animator.SetTrigger("Die");
             Destroy(gameObject);
         }
-        else if (HP < 25)
+        else if (HP < 15)
         {
-            knight.TakeHit(5);
             animator.SetTrigger("Boss_counter_2");
+            knight.TakeHit(5);
+            DamagePopUp.Create(myVector, 5);
         }
         else
         {
-            knight.TakeHit(1);
             animator.SetTrigger("Boss_counter");
+            knight.TakeHit(1);
+            DamagePopUp.Create(myVector, 1);
         }
     }
 }

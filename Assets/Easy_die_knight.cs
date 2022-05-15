@@ -8,6 +8,7 @@ public class Easy_die_knight : MonoBehaviour
     public float maxHP = 20;
     public float HP;
     public Healthbar healthbar;
+    public Game_Load GL;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +24,7 @@ public class Easy_die_knight : MonoBehaviour
         {
             animator.SetTrigger("Ez_Die");
             Destroy(gameObject);
+            GL.LoadMenu();
         }
     }
 }

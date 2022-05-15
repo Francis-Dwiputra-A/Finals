@@ -8,6 +8,7 @@ public class Boss_die_knight : MonoBehaviour
     public float maxHP = 30;
     public float HP;
     public Healthbar healthbar;
+    public Game_Load GL;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +24,7 @@ public class Boss_die_knight : MonoBehaviour
         {
             animator.SetTrigger("Boss_Die");
             Destroy(gameObject);
+            GL.LoadMenu();
         }
     }
 }

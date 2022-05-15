@@ -10,10 +10,7 @@ public class Game_Load : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            LoadNextLevel();
-        }
+
     }
 
     public void LoadNextLevel()
@@ -25,6 +22,11 @@ public class Game_Load : MonoBehaviour
         StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 2));
     }
     
+    public void LoadMenu()
+    {
+        StartCoroutine(LoadLevel(0));
+    }
+
     IEnumerator LoadLevel(int LevelIndex)
     {
         transition.SetTrigger("Start");

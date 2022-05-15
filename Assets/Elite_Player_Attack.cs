@@ -5,10 +5,11 @@ using UnityEngine;
 public class Elite_Player_Attack : MonoBehaviour
 {
     public Animator animator;
-    public float maxHP = 40;
+    public float maxHP = 20;
     public float HP;
     public Healthbar healthbar;
     public EliteEnemyBehaviour enemyBehaviour;
+    public Game_Load GL;
     Vector3 myVector;
 
     void Start()
@@ -19,30 +20,16 @@ public class Elite_Player_Attack : MonoBehaviour
     }
 
     public void btnAttack() {
-        enemyBehaviour.takeHit(5);
+        enemyBehaviour.takeHit(1);
         animator.SetTrigger("att");
-        if (HP < 0)
-        {
-
-        }
-        else
-        {
-            DamagePopUp.Create(myVector, 5);
-        }
+        DamagePopUp.Create(myVector, 1);
     }
 
     public void btnStrike()
     {
-        enemyBehaviour.takeHit(10);
+        enemyBehaviour.takeHit(2);
         animator.SetTrigger("Strike");
-        if (HP < 0)
-        {
-
-        }
-        else
-        {
-            DamagePopUp.Create(myVector, 10);
-        }
+        DamagePopUp.Create(myVector, 2);
     }
 
     public void btnShield() {
@@ -56,6 +43,7 @@ public class Elite_Player_Attack : MonoBehaviour
         if (HP < 1)
         {
             Destroy(gameObject);
+            GL.LoadMenu();
         }
     }
 }

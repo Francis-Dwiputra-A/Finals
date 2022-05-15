@@ -6,7 +6,7 @@ using UnityEngine;
 public class EliteEnemyBehaviour : MonoBehaviour
 {
     public Animator animator;
-    public float maxHP = 30;
+    public float maxHP = 15;
     public float HP;
     public Healthbar healthbar;
     public Elite_Player_Attack epa;
@@ -30,18 +30,8 @@ public class EliteEnemyBehaviour : MonoBehaviour
             GL.LoadNextLevel();
         }
         else {
-            epa.TakeHit(10);
-            if (HP < 0)
-            {
-
-            }
-            else
-            {
-                //System.Threading.Thread.Sleep(1000);
-                //Thread.Sleep(1000);
-                
-                DamagePopUp.Create(myVector, 10);
-            }
+            epa.TakeHit(2);
+            DamagePopUp.Create(myVector, 2);
             animator.SetTrigger("Enemy_Att");
         }
     }
