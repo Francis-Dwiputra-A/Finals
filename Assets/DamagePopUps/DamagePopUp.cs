@@ -34,7 +34,7 @@ public class DamagePopUp : MonoBehaviour
     }
     private void Update()
     {
-        float moveYSpeed = 10f;
+        float moveYSpeed = 3f;
         transform.position += new Vector3(0, moveYSpeed) * Time.deltaTime;
         //transform.position += new Vector3(0, 100);
     }

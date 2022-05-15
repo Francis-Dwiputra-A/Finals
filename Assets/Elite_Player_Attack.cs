@@ -9,22 +9,40 @@ public class Elite_Player_Attack : MonoBehaviour
     public float HP;
     public Healthbar healthbar;
     public EliteEnemyBehaviour enemyBehaviour;
+    Vector3 myVector;
 
     void Start()
     {
         HP = maxHP;
         healthbar.setMaxHealth(maxHP);
+        myVector = new Vector3(14.0f, 4.8f, 0.0f);
     }
 
     public void btnAttack() {
         enemyBehaviour.takeHit(5);
         animator.SetTrigger("att");
+        if (HP < 0)
+        {
+
+        }
+        else
+        {
+            DamagePopUp.Create(myVector, 5);
+        }
     }
 
     public void btnStrike()
     {
         enemyBehaviour.takeHit(10);
         animator.SetTrigger("Strike");
+        if (HP < 0)
+        {
+
+        }
+        else
+        {
+            DamagePopUp.Create(myVector, 10);
+        }
     }
 
     public void btnShield() {

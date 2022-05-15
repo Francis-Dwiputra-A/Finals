@@ -20,7 +20,11 @@ public class Game_Load : MonoBehaviour
     {
         StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
     }
-
+    public void LoadNextLevel2()
+    {
+        StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 2));
+    }
+    
     IEnumerator LoadLevel(int LevelIndex)
     {
         transition.SetTrigger("Start");
