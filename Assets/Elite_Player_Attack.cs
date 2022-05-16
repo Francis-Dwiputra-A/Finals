@@ -43,7 +43,7 @@ public class Elite_Player_Attack : MonoBehaviour
         if (HP < 1)
         {
             Destroy(gameObject);
-            GL.LoadMenu();
+            GL.LoadMenu_Lose();
         }
     }
 }

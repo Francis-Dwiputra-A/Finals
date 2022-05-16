@@ -24,7 +24,7 @@ public class Boss_die_knight : MonoBehaviour
         {
             animator.SetTrigger("Boss_Die");
             Destroy(gameObject);
-            GL.LoadMenu();
+            GL.LoadMenu_Lose();
         }
     }
 }

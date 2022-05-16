@@ -24,7 +24,7 @@ public class Easy_die_knight : MonoBehaviour
         {
             animator.SetTrigger("Ez_Die");
             Destroy(gameObject);
-            GL.LoadMenu();
+            GL.LoadMenu_Lose();
         }
     }
 }

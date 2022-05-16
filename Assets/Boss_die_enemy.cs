@@ -9,6 +9,7 @@ public class Boss_die_enemy : MonoBehaviour
     public float HP;
     public Healthbar healthbar;
     public Boss_die_knight knight;
+    public Game_Load GL;
     Vector3 myVector;
     // Start is called before the first frame update
     void Start()
@@ -26,6 +27,7 @@ public class Boss_die_enemy : MonoBehaviour
         {
             animator.SetTrigger("Die");
             Destroy(gameObject);
+            GL.LoadMenu_Win();
         }
         else if (HP < 15)
         {
